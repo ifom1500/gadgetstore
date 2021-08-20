@@ -1,0 +1,51 @@
+.user-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 136px;
+  padding: 0;
+  margin: 0;
+  // свойство должно быть у элемента, как позиционирование
+  // убрать margin-left: auto; при исользовании как блока в другом месте
+  margin-left: auto;
+  list-style: none;
+}
+
+.user-nav__item {
+  width: 24px;
+  height: 24px;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.2));
+}
+
+.user-nav__icon {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+}
+
+.user-nav__item--cart {
+  .user-nav__icon::before {
+    background-image: url("../img/common/cart.svg");
+  }
+}
+
+.user-nav__item--favorite {
+  .user-nav__icon::before {
+    background-image: url("../img/common/favorite.svg");
+  }
+}
+
+.user-nav__item--user {
+  .user-nav__icon::before {
+    background-image: url("../img/common/user.svg");
+  }
+}

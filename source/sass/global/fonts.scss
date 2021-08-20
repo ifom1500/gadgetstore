@@ -1,0 +1,30 @@
+@mixin font-face($font-name, $path, $weight, $style) {
+
+  @font-face {
+    font-family: quote($font-name);
+    src:
+      url("#{$path}.woff") format("woff"),
+      url("#{$path}.woff2") format("woff2"),
+      url("#{$path}.ttf") format("truetype");
+    font-style: $style;
+    font-weight: $weight;
+    font-display: swap;
+  }
+}
+
+@mixin font($size, $weight, $line-height) {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+}
+
+@include font-face("Roboto", "../fonts/roboto/robotolight/robotolight", 300, normal);
+
+@include font-face("Roboto", "../fonts/roboto/robotoregular/robotoregular", 400, normal);
+
+@include font-face("Roboto", "../fonts/roboto/robotomedium/robotomedium", 500, normal);
+
+@include font-face("Roboto", "../fonts/roboto/robotoblack/robotoblack", 900, normal);
+
+@include font-face("Actor", "../fonts/actor/actor", 400, normal);

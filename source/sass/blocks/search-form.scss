@@ -1,0 +1,57 @@
+.search-form {
+  position: relative;
+  display: flex;
+
+  &::before {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    content: "";
+    background: url("../img/common/search.svg") 0 0 no-repeat;
+  }
+}
+
+.search-form__input {
+  width: 290px;
+  padding: 10px;
+  padding-left: 50px;
+  background-color: transparent;
+  border: none;
+
+  @include font(18px, 300, 22px);
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &:hover::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:focus::placeholder {
+    color: rgba(0, 0, 0, 1);
+  }
+}
+
+.search-form__go {
+  position: relative;
+  width: 30px;
+  background-color: transparent;
+  border: none;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 40px;
+    content: "";
+    background: url("../img/common/go.svg") 4px 9px no-repeat;
+  }
+}

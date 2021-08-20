@@ -2,5 +2,14 @@
   "extends": [
     "stylelint-config-standard",
     "stylelint-config-recess-order"
-  ]
+  ],
+  "rules": {
+    "at-rule-no-unknown": [
+      true, {
+        "ignoreAtRules": ["include", "mixin"]
+      }
+    ],
+    "at-rule-empty-line-before": "always",
+    "color-hex-length": "long"
+  }
 }

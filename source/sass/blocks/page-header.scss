@@ -1,0 +1,37 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header__top {
+  display: flex;
+  align-items: top;
+  min-height: 59px;
+  padding-top: 39px;
+}
+
+.page-header__logo {
+  margin-right: 200px;
+}
+
+.page-header__menu-toggle {
+  display: none;
+}
+
+.page-header__bottom {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.page-header__search {
+  align-self: center;
+  margin-right: 80px;
+}
+
+.page-header__catalog-nav {
+  // данное позиционирвоание переопределяется в блоке, так как стоит ниже в каскаде
+  // см. блок user-nav.scss
+  margin-left: auto;
+}

@@ -1,0 +1,26 @@
+.catalog-nav {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  padding: 0;
+  margin: 0;
+  margin: 0 -15px;
+  // свойство должно быть у элемента, как позиционирование
+  // убрать margin-left: auto; при исользовании как блока в другом месте
+  margin-left: auto;
+  color: $cataloglink-color;
+  list-style: none;
+
+  @include font(16px, 500, 24px);
+}
+
+.catalog-nav__item {
+  padding: 0 15px;
+}
+
+.catalog-nav__link {
+  display: block;
+  padding: 20px 0;
+  color: inherit;
+  text-decoration: none;
+}

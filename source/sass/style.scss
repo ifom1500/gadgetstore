@@ -1,11 +1,21 @@
-body {
-  background: yellow;
-}
+@import "global/variables.scss";
 
-p {
-  padding: 20px;
-  margin: 0.9px;
-  font-size: 40px;
-  color: blue;
-  background-color: red;
-}
+@import "global/fonts.scss";
+
+@import "global/global.scss";
+
+@import "blocks/container.scss";
+
+@import "blocks/page";
+
+@import "blocks/page-header";
+
+@import "blocks/logo";
+
+@import "blocks/menu";
+
+@import "blocks/user-nav.scss";
+
+@import "blocks/search-form.scss";
+
+@import "blocks/catalog-nav.scss";

@@ -4,7 +4,6 @@ const sourcemap = require("gulp-sourcemaps");
 const sass = require("gulp-sass")(require("sass"));
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
-const csso = require("postcss-csso");
 const stylelint = require('gulp-stylelint');
 const htmlmin = require("gulp-htmlmin");
 
@@ -29,8 +28,7 @@ const sass2css = () => {
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(postcss([
-      autoprefixer(),
-      csso()
+      // autoprefixer()
     ]))
     .pipe(rename({
       suffix: '.min'
@@ -44,12 +42,14 @@ exports.sass2css = sass2css
 
 const scssLinter = () => {
   return gulp.src("source/sass/**/*.scss")
+    .pipe(plumber())
     .pipe(stylelint({
       fix: true,
       reporters: [
         { formatter: 'string', console: true }
       ]
     }))
+    .pipe(plumber.stop())
 }
 
 exports.scssLinter = scssLinter
