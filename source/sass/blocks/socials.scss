@@ -1,0 +1,39 @@
+.socials {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  // margin: 0;
+  list-style: none;
+}
+
+.socials_item {
+  padding: 0 6px;
+}
+
+.socials_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 8px;
+
+  &:hover,
+  &:focus {
+    background: rgba($button-color, 1);
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: $button-color;
+    stroke: #ffffff;
+    stroke-width: 1.2px;
+  }
+
+  &:hover svg path,
+  &:focus svg path {
+    stroke: #ffffff;
+    stroke-width: 1.5px;
+  }
+}

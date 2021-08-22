@@ -1,0 +1,26 @@
+.phone-list {
+  padding-top: 13px;
+  margin: 0;
+  color: rgba(#000000, 0.7);
+}
+
+.phone-list__item {
+  margin-bottom: 20px;
+}
+
+.phone-list__number {
+  text-decoration: none;
+  color: rgba(#000000, 0.6);
+
+  @include font (28px, 500, 32px);
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+}
+
+.phone-list__description {
+  padding-top: 4px;
+  margin: 0;
+}

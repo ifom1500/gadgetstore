@@ -3,11 +3,7 @@
   flex-wrap: wrap;
   max-width: 900px;
   padding: 0;
-  margin: 0;
   margin: 0 -15px;
-  // свойство должно быть у элемента, как позиционирование
-  // убрать margin-left: auto; при исользовании как блока в другом месте
-  margin-left: auto;
   color: $cataloglink-color;
   list-style: none;
 

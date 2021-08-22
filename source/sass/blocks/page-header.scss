@@ -21,6 +21,7 @@
 .page-header__bottom {
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -31,7 +32,5 @@
 }
 
 .page-header__catalog-nav {
-  // данное позиционирвоание переопределяется в блоке, так как стоит ниже в каскаде
-  // см. блок user-nav.scss
-  margin-left: auto;
+  // пока ничего
 }
