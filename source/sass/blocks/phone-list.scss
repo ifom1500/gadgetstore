@@ -9,14 +9,19 @@
 }
 
 .phone-list__number {
-  text-decoration: none;
   color: rgba(#000000, 0.6);
+  text-decoration: none;
+  transition: 150ms;
 
   @include font (28px, 500, 32px);
 
   &:hover,
   &:focus {
-    opacity: 0.8;
+    opacity: 0.4;
+  }
+
+  &:active {
+    opacity: 0.2;
   }
 }
 

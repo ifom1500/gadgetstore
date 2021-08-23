@@ -19,6 +19,7 @@
 
 .user-nav__icon {
   position: relative;
+  transition: 150ms;
 
   &::before {
     position: absolute;
@@ -29,6 +30,15 @@
     content: "";
     background-repeat: no-repeat;
     background-position: top center;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 

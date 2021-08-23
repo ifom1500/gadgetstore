@@ -3,7 +3,6 @@
   column-gap: 90px;
   padding: 0;
   margin: 0;
-  color: rgba(#000000, 0.7);
   vertical-align: top;
   list-style: none;
 }
@@ -15,11 +14,16 @@
 .footer-nav__link {
   display: block;
   padding-top: 5px;
-  color: inherit;
+  color: rgba(#000000, 0.6);
   text-decoration: none;
+  transition: 150ms;
 
   &:hover,
   &:focus {
     color: rgba(#000000, 1);
+  }
+
+  &:active {
+    color: rgba(#000000, 0.4);
   }
 }

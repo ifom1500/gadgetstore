@@ -25,16 +25,26 @@
 
 .page-footer__button--callback {
   position: relative;
-  padding-left: 50px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 45px;
   margin-top: 10px;
+
+  @include font(14px, 500, 18px);
 
   &::before {
     position: absolute;
-    left: 22px;
-    width: 24px;
-    height: 24px;
+    left: 24px;
+    width: 20px;
+    height: 20px;
     content: "";
     background: url("../img/common/callback.svg") center center no-repeat;
+    background-size: cover;
+    transition: 300ms;
+  }
+
+  &:hover::before {
+    transform: rotate(45deg);
   }
 }
 
@@ -52,10 +62,14 @@
   margin: 0 10px;
   color: rgba(#000000, 0.5);
   text-decoration: none;
+  transition: 150ms;
 
   &:hover,
   &:focus {
-    color: rgba(#000000, 0.6);
-    text-decoration: underline;
+    color: rgba(#000000, 0.8);
+  }
+
+  &:active {
+    color: rgba(#000000, 0.4);
   }
 }

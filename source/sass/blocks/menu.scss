@@ -1,7 +1,6 @@
 .menu {
   display: flex;
   flex-grow: 1;
-  color: $text-color;
 
   @include font(18px, 500, 24px);
 }
@@ -23,8 +22,18 @@
 .menu__link {
   display: block;
   padding: 20px 0;
-  color: inherit;
+  color: $main-text-color;
   text-decoration: none;
+  transition: 100ms;
+
+  &:hover,
+  &:focus {
+    color: rgba($main-text-color, 0.4);
+  }
+
+  &:active {
+    color: rgba($main-text-color, 0.2);
+  }
 }
 
 .menu_phone-link {

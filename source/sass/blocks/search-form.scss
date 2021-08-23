@@ -10,6 +10,7 @@
     height: 24px;
     content: "";
     background: url("../img/common/search.svg") 0 0 no-repeat;
+    opacity: 0.6;
   }
 }
 
@@ -28,6 +29,7 @@
 
   &::placeholder {
     color: rgba(0, 0, 0, 0.3);
+    transition: 200ms;
   }
 
   &:hover::placeholder {
@@ -41,6 +43,7 @@
 
 .search-form__go {
   position: relative;
+  display: none;
   width: 30px;
   background-color: transparent;
   border: none;
@@ -54,4 +57,10 @@
     content: "";
     background: url("../img/common/go.svg") 4px 9px no-repeat;
   }
+}
+
+// Показывает кнопку при фокусе в поле ввода
+
+.search-form__input:focus + .search-form__go {
+  display: block;
 }
