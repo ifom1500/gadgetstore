@@ -11,15 +11,14 @@
   border-radius: 8px;
   transition: 300ms;
 
-
   @include font(16px, 500, 24px);
 
   &:hover,
   &:focus {
-    background-color: rgba($button-color, 0.5);
+    background-color: rgba($button-color, 0.7);
   }
 
   &:active {
-    background-color: rgba($button-color, 0.3);
+    background-color: rgba($button-color, 0.4);
   }
 }

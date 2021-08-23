@@ -1,4 +1,5 @@
 .page {
+  position: relative;
   height: 100%;
 }
 
@@ -18,7 +19,10 @@
 }
 
 .page__header {
+  position: relative;
+  z-index: 5;
   flex-shrink: 0;
+  background: transparent;
 }
 
 .page__main {

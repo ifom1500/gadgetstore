@@ -1,0 +1,65 @@
+.control {
+  display: flex;
+}
+
+.control__toggle {
+  position: relative;
+  width: 80px;
+  height: 64px;
+  padding: 0;
+  margin-left: 24px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 6px;
+
+  &--current {
+    background-image: linear-gradient(135deg, rgba($circle1-gradient-color, 0.2) 0%, rgba($circle2-gradient-color, 0.2) 100%);
+    border: 4px solid #ffffff;
+  }
+
+  &--smartphone::before {
+    position: absolute;
+    top: -10px;
+    left: 6px;
+    width: 65px;
+    height: 65px;
+    cursor: auto;
+    content: "";
+    background: url("../img/content/smartphone.png") center center no-repeat;
+    background-size: cover;
+  }
+
+  &--robot::before {
+    position: absolute;
+    top: 0;
+    left: 9px;
+    width: 65px;
+    height: 65px;
+    content: "";
+    background: url("../img/content/robot.png") center center no-repeat;
+    background-size: cover;
+    transition: 300ms;
+  }
+
+  &--robot:hover::before,
+  &--robot:focus::before {
+    top: -15px;
+  }
+
+  &--laptop::before {
+    position: absolute;
+    top: 0;
+    left: 6px;
+    width: 65px;
+    height: 65px;
+    content: "";
+    background: url("../img/content/laptop.png") center center no-repeat;
+    background-size: cover;
+    transition: 300ms;
+  }
+
+  &--laptop:hover::before,
+  &--laptop:focus::before {
+    top: -15px;
+  }
+}

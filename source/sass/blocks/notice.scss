@@ -1,0 +1,95 @@
+.notice {
+  position: relative;
+  width: 644px;
+  height: 128px;
+  padding: 0 78px 0 50px;
+  margin-top: -64px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 34px rgba(0, 0, 0, 0.08);
+}
+
+.notice__tradein {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.notice__link {
+  color: rgba(#000000, 0.7);
+  text-decoration: none;
+  transition: 200ms;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+}
+
+.notice__title {
+  position: relative;
+  width: 165px;
+  margin: 0;
+
+  @include font(18px, 400, 30px);
+
+  &::before {
+    position: absolute;
+    top: 20px;
+    right: -50px;
+    width: 24px;
+    height: 24px;
+    content: "";
+    background: url("../img/common/arrow-next.svg") center center no-repeat;
+  }
+
+  .notice__link:hover &::before,
+  .notice__link:focus &::before {
+    animation: shake-arrow 600ms ease 100ms;
+  }
+}
+
+@keyframes shake-arrow {
+  20% {
+    transform: translateX(-3px);
+  }
+
+  40% {
+    transform: translateX(3px);
+  }
+
+  60% {
+    transform: translateX(-3px);
+  }
+
+  80% {
+    transform: translateX(3px);
+  }
+}
+
+.notice__slogan {
+  position: relative;
+  text-align: center;
+
+  @include font(18px, 400, 30px);
+
+  &::before {
+    position: absolute;
+    top: -5px;
+    left: 213px;
+    width: 100px;
+    height: 80px;
+    content: "";
+    background: url("../img/common/tradein-laptop.png") center center no-repeat;
+    background-size: cover;
+  }
+}
+
+.notice__accent {
+  color: $button-color;
+  text-transform: uppercase;
+
+  @include font(26px, 900, 35px);
+}

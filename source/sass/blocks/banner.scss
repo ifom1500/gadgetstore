@@ -1,0 +1,147 @@
+.banner {
+  position: relative;
+  min-height: 656px;
+
+  &::before {
+    position: absolute;
+    top: -200px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 200px);
+    content: "";
+    background-image: linear-gradient(90deg, rgba(#000000, 0.01) 0%, rgba(#000000, 0.06) 100%);
+  }
+}
+
+.banner_wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner__item {
+  display: none;
+  align-items: stretch;
+  justify-content: space-between;
+
+  &--current {
+    display: flex;
+  }
+
+  &--smartphone .banner__img {
+    position: absolute;
+    top: -50px;
+    left: -37px;
+    width: 600px;
+    height: 600px;
+  }
+
+  &--robot .banner__img {
+    position: absolute;
+    top: -10px;
+    left: -50px;
+    width: 550px;
+    height: 550px;
+  }
+
+  &--laptop .banner__img {
+    position: absolute;
+    top: -50px;
+    left: -60px;
+    width: 600px;
+    height: 600px;
+  }
+}
+
+.banner__column-left {
+  max-width: 600px;
+  padding: 64px 0 94px 0;
+}
+
+.banner__title {
+  margin: 0;
+  margin-bottom: 20px;
+  color: rgba(#000000, 0.8);
+
+  @include font(72px, 900, 72px);
+}
+
+.banner__subtitle {
+  margin: 0;
+  margin-bottom: 20px;
+
+  @include font(48px, 300, 70px);
+}
+
+.banner__text {
+  margin-bottom: 28px;
+  color: rgba(#000000, 0.8);
+
+  @include font(16px, 400, 24px);
+}
+
+.banner__price {
+  margin-bottom: 50px;
+  color: rgba(#000000, 0.7);
+
+  @include font(24px, 900, 32px);
+}
+
+.banner__button {
+  position: relative;
+  display: inline-block;
+  padding-right: 40px;
+  padding-left: 64px;
+
+  &::before {
+    position: absolute;
+    left: 22px;
+    width: 24px;
+    height: 24px;
+    content: "";
+    background-image: url("../img/common/cart--white.svg");
+  }
+
+  &:hover::before,
+  &:focus::before {
+    animation: shake-cart 600ms ease 100ms;
+  }
+}
+
+@keyframes shake-cart {
+  20% {
+    transform: rotate(-10deg);
+  }
+
+  40% {
+    transform: rotate(10deg);
+  }
+
+  60% {
+    transform: rotate(-10deg);
+  }
+
+  80% {
+    transform: rotate(10deg);
+  }
+}
+
+.banner__column-right {
+  padding-right: 80px;
+}
+
+.banner__preview-inner {
+  position: relative;
+}
+
+.banner__circle {
+  width: 500px;
+  height: 500px;
+  background-image: linear-gradient(135deg, $circle1-gradient-color 0%, $circle2-gradient-color 100%);
+  border-radius: 50%;
+}
+
+.banner__toggles {
+  align-self: flex-end;
+  margin-bottom: 14px;
+}

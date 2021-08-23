@@ -28,9 +28,4 @@
   &:active {
     color: rgba($cataloglink-color, 0.4);
   }
-
-  &--current {
-    color: $cataloglink-color;
-    border-bottom: 1px solid $button-color;
-  }
 }

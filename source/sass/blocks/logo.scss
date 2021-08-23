@@ -3,17 +3,19 @@
   align-items: center;
   width: 313px;
   height: 59px;
-  // background-color: violet;
 
-  &:hover .logo__1st-box {
+  &:hover .logo__1st-box,
+  &:focus .logo__1st-box {
     animation: logo-1st-box 1s linear infinite alternate;
   }
 
-  &:hover .logo__2nd-box {
+  &:hover .logo__2nd-box,
+  &:focus .logo__2nd-box {
     animation: logo-2nd-box 1s linear infinite alternate;
   }
 
-  &:hover .logo__3rd-box {
+  &:hover .logo__3rd-box,
+  &:focus .logo__3rd-box {
     animation: logo-3rd-box 1s linear infinite alternate;
   }
 }
@@ -28,7 +30,8 @@
   height: 26px;
   margin-left: auto;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 70%;
   }
 
