@@ -16,16 +16,16 @@
 .catalog-nav__link {
   display: block;
   padding: 3px 0;
-  color: rgba($cataloglink-color, 0.5);
+  color: $accent-tint--text;
   text-decoration: none;
   transition: all 150ms;
 
   &:hover,
   &:focus {
-    color: rgba($cataloglink-color, 0.8);
+    color: $accent-tint--hover;
   }
 
   &:active {
-    color: rgba($cataloglink-color, 0.4);
+    color: $accent-tint--active;
   }
 }

@@ -1,0 +1,59 @@
+.address {
+  width: auto;
+  height: auto;
+  padding: 25px;
+  white-space: nowrap;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 34px rgba(0, 0, 0, 0.08);
+}
+
+.address__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  @include font(16px, 300, 22px);
+}
+
+.address__item {
+  border-radius: 10px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.06);
+}
+
+.address__label {
+  display: block;
+  padding: 20px;
+  margin-top: 30px;
+  cursor: pointer;
+  border-radius: 10px 10px 0 0;
+  transition: 200ms linear;
+
+  .address__input:checked + & {
+    background-color: $accent-tint--active;
+  }
+
+  &--margin {
+    margin-top: 0;
+  }
+}
+
+.address__input {
+  display: none;
+}
+
+.address__schedule {
+  max-height: 0;
+  overflow: hidden;
+  transition: 600ms linear;
+
+  @include font(14px, 300, 27px);
+
+  .address__input:checked ~ & {
+    max-height: 100px;
+  }
+}
+
+.address__text {
+  padding: 20px;
+}

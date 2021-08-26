@@ -13,8 +13,14 @@
   border-radius: 6px;
 
   &--current {
-    background-image: linear-gradient(135deg, rgba($circle1-gradient-color, 0.2) 0%, rgba($circle2-gradient-color, 0.2) 100%);
+    background-image:
+      linear-gradient(
+        135deg,
+        rgba($gradient-color--circle-1, 0.2) 0%,
+        rgba($gradient-color--circle-2, 0.2) 100%
+      );
     border: 4px solid #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
   }
 
   &--smartphone::before {

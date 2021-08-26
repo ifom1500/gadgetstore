@@ -1,0 +1,19 @@
+// .services {}
+
+.services__title {
+  margin-bottom: 32px;
+}
+
+// .services__inner {
+
+// }
+
+.services__list {
+  display: grid;
+  grid-template-rows: minmax(130px, 1fr) minmax(130px, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}

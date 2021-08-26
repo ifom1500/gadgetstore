@@ -27,30 +27,6 @@
   &--current {
     display: flex;
   }
-
-  &--smartphone .banner__img {
-    position: absolute;
-    top: -50px;
-    left: -37px;
-    width: 600px;
-    height: 600px;
-  }
-
-  &--robot .banner__img {
-    position: absolute;
-    top: -10px;
-    left: -50px;
-    width: 550px;
-    height: 550px;
-  }
-
-  &--laptop .banner__img {
-    position: absolute;
-    top: -50px;
-    left: -60px;
-    width: 600px;
-    height: 600px;
-  }
 }
 
 .banner__column-left {
@@ -84,21 +60,11 @@
   margin-bottom: 50px;
   color: rgba(#000000, 0.7);
 
-  @include font(24px, 900, 32px);
+  @include font(24px, 700, 32px);
 }
 
 .banner__button {
-  position: relative;
-  display: inline-block;
-  padding-right: 40px;
-  padding-left: 64px;
-
   &::before {
-    position: absolute;
-    left: 22px;
-    width: 24px;
-    height: 24px;
-    content: "";
     background-image: url("../img/common/cart--white.svg");
   }
 
@@ -137,8 +103,51 @@
 .banner__circle {
   width: 500px;
   height: 500px;
-  background-image: linear-gradient(135deg, $circle1-gradient-color 0%, $circle2-gradient-color 100%);
+  background-image:
+    linear-gradient(
+      135deg,
+      $gradient-color--circle-1 0%,
+      $gradient-color--circle-2 100%
+    );
   border-radius: 50%;
+  transition: 500ms;
+
+  .banner__preview-inner:hover & {
+    transform: scale(0.98, 0.98);
+    // transform: rotateY(20deg) skewY(-3deg);
+  }
+}
+
+.banner__img {
+  transition: 800ms;
+
+  .banner__item--smartphone & {
+    position: absolute;
+    top: -50px;
+    left: -37px;
+    width: 600px;
+    height: 600px;
+  }
+
+  .banner__item--robot & {
+    position: absolute;
+    top: -10px;
+    left: -50px;
+    width: 550px;
+    height: 550px;
+  }
+
+  .banner__item--laptop & {
+    position: absolute;
+    top: -50px;
+    left: -60px;
+    width: 600px;
+    height: 600px;
+  }
+
+  .banner__preview-inner:hover & {
+    transform: scale(1.02, 1.02);
+  }
 }
 
 .banner__toggles {

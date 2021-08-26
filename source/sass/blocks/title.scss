@@ -1,0 +1,6 @@
+.title {
+  margin: 0;
+  color: rgba(#000000, 0.7);
+
+  @include font(24px, 900, 32px);
+}

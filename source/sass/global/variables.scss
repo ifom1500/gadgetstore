@@ -1,15 +1,16 @@
 // Colors
 
-// New
+// Accent
 
-$main-text-color: rgba(#000000, 0.7); // menu,
-$cataloglink-color: #da498c; // catalog-nav
-$button-color: #d90429; // catalog-nav
+$accent-color: #da498c;
+$accent-tint--text: rgba(#da498c, 0.6);
+$accent-tint--hover: rgba(#da498c, 0.85);
+$accent-tint--active: rgba(#da498c, 0.3);
 
-$circle1-gradient-color: #ff99aa;
-$circle2-gradient-color: #b2abed;
-$bg1-gradient-color: rgba(#000000, 0.01);
-$bg2-gradient-color: rgba(#000000, 0.06);
+// Gradient
+
+$gradient-color--circle-1: #ff99aa;
+$gradient-color--circle-2: #b2abed;
 
 // Viewports
 

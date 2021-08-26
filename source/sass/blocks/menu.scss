@@ -22,17 +22,17 @@
 .menu__link {
   display: block;
   padding: 20px 0;
-  color: $main-text-color;
+  color: rgba(#000000, 0.7);
   text-decoration: none;
   transition: 100ms;
 
   &:hover,
   &:focus {
-    color: rgba($main-text-color, 0.4);
+    color: rgba(#000000, 0.4);
   }
 
   &:active {
-    color: rgba($main-text-color, 0.2);
+    color: rgba(#000000, 0.2);
   }
 }
 

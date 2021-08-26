@@ -22,12 +22,12 @@
 
   &:hover,
   &:focus {
-    background: rgba($button-color, 1);
+    background: $accent-color;
   }
 
   &:hover svg,
   &:focus svg {
-    fill: $button-color;
+    fill: $accent-color;
     stroke: #ffffff;
     stroke-width: 1.2px;
   }
@@ -39,10 +39,10 @@
   }
 
   &:active {
-    background: rgba($button-color, 0.5);
+    background: $accent-tint--active;
   }
 
   &:active svg {
-    fill: rgba($button-color, 0.1);
+    fill: $accent-tint--active;
   }
 }

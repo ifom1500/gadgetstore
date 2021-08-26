@@ -1,16 +1,18 @@
 // Global
 
-@import "global/variables.scss";
+@import "global/variables";
 
-@import "global/fonts.scss";
+@import "global/fonts";
 
-@import "global/global.scss";
+@import "global/global";
 
-@import "blocks/container.scss";
+@import "blocks/container";
 
-@import "blocks/button.scss";
+@import "blocks/button";
 
 @import "blocks/page";
+
+@import "blocks/title";
 
 // Header
 
@@ -20,28 +22,52 @@
 
 @import "blocks/menu";
 
-@import "blocks/user-nav.scss";
+@import "blocks/user-nav";
 
-@import "blocks/search-form.scss";
+@import "blocks/search-form";
 
-@import "blocks/catalog-nav.scss";
+@import "blocks/catalog-nav";
 
 // Footer
 
-@import "blocks/page-footer.scss";
+@import "blocks/page-footer";
 
-@import "blocks/footer-nav.scss";
+@import "blocks/footer-nav";
 
-@import "blocks/phone-list.scss";
+@import "blocks/phone-list";
 
-@import "blocks/socials.scss";
+@import "blocks/socials";
 
 // Main - Banner
 
-@import "blocks/main-content.scss";
+@import "blocks/main-content";
 
-@import "blocks/banner.scss";
+@import "blocks/banner";
 
-@import "blocks/control.scss";
+@import "blocks/control";
 
-@import "blocks/notice.scss";
+// Main - Notice
+
+@import "blocks/notice";
+
+// Main - Popular products
+
+@import "blocks/popular-products";
+
+@import "blocks/product-card";
+
+// Main - Watchword
+
+@import "blocks/watchword";
+
+// Main - Services
+
+@import "blocks/services";
+
+@import "blocks/service-card";
+
+// Main - Map - map
+
+@import "blocks/map";
+
+@import "blocks/address";

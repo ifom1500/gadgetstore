@@ -17,8 +17,7 @@
   height: 100%;
 }
 
-.notice__link {
-  color: rgba(#000000, 0.7);
+.notice__title-link {
   text-decoration: none;
   transition: 200ms;
 
@@ -32,6 +31,7 @@
   position: relative;
   width: 165px;
   margin: 0;
+  color: rgba(#000000, 0.7);
 
   @include font(18px, 400, 30px);
 
@@ -45,8 +45,8 @@
     background: url("../img/common/arrow-next.svg") center center no-repeat;
   }
 
-  .notice__link:hover &::before,
-  .notice__link:focus &::before {
+  .notice__title-link:hover &::before,
+  .notice__title-link:focus &::before {
     animation: shake-arrow 600ms ease 100ms;
   }
 }
@@ -69,9 +69,15 @@
   }
 }
 
+.notice__slogan-link {
+  text-decoration: none;
+}
+
 .notice__slogan {
   position: relative;
+  color: rgba(#000000, 0.8);
   text-align: center;
+  transition: 300ms;
 
   @include font(18px, 400, 30px);
 
@@ -85,11 +91,24 @@
     background: url("../img/common/tradein-laptop.png") center center no-repeat;
     background-size: cover;
   }
+
+  .notice__slogan-link:hover & {
+    color: rgba(#000000, 0.5);
+  }
 }
 
 .notice__accent {
-  color: $button-color;
+  color: $accent-tint--text;
   text-transform: uppercase;
+  transition: 300ms;
 
-  @include font(26px, 900, 35px);
+  @include font(26px, 700, 35px);
+
+  .notice__slogan-link:hover & {
+    color: $accent-tint--hover;
+  }
+
+  .notice__slogan-link:active & {
+    color: $accent-tint--active;
+  }
 }
