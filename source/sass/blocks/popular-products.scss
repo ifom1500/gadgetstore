@@ -3,21 +3,25 @@
 
 .popular-products__title {
   margin-bottom: 32px;
+
+  @media (max-width: $mobile) {
+    margin-top: 50px;
+    text-align: center;
+  }
 }
 
 .popular-products__inner {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 }
 
 .popular-products__list {
   display: flex;
   flex-wrap: wrap;
-  align-items: stretch;
   padding: 0;
   margin: 0;
   margin: 0 -12px;
-  margin-bottom: 15px;
   list-style: none;
 }
 
@@ -26,32 +30,33 @@
 }
 
 .popular-products__to-catalog {
-  position: relative;
+  display: flex;
+  align-items: center;
   align-self: flex-end;
-  padding: 10px 0;
-  padding-right: 45px;
   color: rgba(#000000, 0.7);
   text-decoration: none;
   transition: 300ms;
 
-  @include font(16px, 500, 24px);
+  @include font(16px, 500, 20px);
 
   &:hover {
     color: $accent-color;
   }
 
-  &::before {
-    position: absolute;
-    top: 8px;
-    right: 0;
-    width: 24px;
-    height: 24px;
-    content: "";
-    background: url("../img/common/arrow-next.svg") center center no-repeat;
+  @media (max-width: $mobile) {
+    margin: 0 auto;
   }
+}
 
-  &:hover::before,
-  &:focus::before {
+.popular-products__arrow-icon {
+  width: 20px;
+  height: auto;
+  margin-left: 10px;
+  fill: rgba(#000000, 0.7);
+
+  .popular-products__to-catalog:hover &,
+  .popular-products__to-catalog:focus & {
+    fill: $accent-color;
     animation: shake-arrow-catalog 600ms ease 100ms;
   }
 }

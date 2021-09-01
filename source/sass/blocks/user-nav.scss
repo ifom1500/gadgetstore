@@ -1,61 +1,45 @@
 .user-nav {
-  display: flex;
   align-items: center;
   justify-content: space-between;
   width: 136px;
   padding: 0;
   margin: 0;
-  // свойство должно быть у элемента, как позиционирование
-  // убрать margin-left: auto; при исользовании как блока в другом месте
-  margin-left: auto;
   list-style: none;
+
+  &--opened-on-mobile {
+    @media (max-width: $mobile) {
+      position: absolute;
+      top: 0;
+      right: -1px;
+      width: 90px;
+
+      .user-nav__item {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
 }
 
 .user-nav__item {
-  width: 24px;
-  height: 24px;
+  width: 21px;
+  height: 21px;
   filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.2));
 }
 
 .user-nav__icon {
   position: relative;
+  width: 100%;
+  height: 100%;
+  stroke: rgba(#000000, 0.7);
   transition: 150ms;
-
-  &::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 24px;
-    height: 24px;
-    content: "";
-    background-repeat: no-repeat;
-    background-position: top center;
-  }
 
   &:hover,
   &:focus {
-    opacity: 0.5;
+    stroke: $accent-color;
   }
 
   &:active {
     opacity: 0.3;
-  }
-}
-
-.user-nav__item--cart {
-  .user-nav__icon::before {
-    background-image: url("../img/common/cart.svg");
-  }
-}
-
-.user-nav__item--favorite {
-  .user-nav__icon::before {
-    background-image: url("../img/common/favorite.svg");
-  }
-}
-
-.user-nav__item--user {
-  .user-nav__icon::before {
-    background-image: url("../img/common/user.svg");
   }
 }

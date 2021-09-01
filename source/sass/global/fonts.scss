@@ -12,13 +12,6 @@
   }
 }
 
-@mixin font($size, $weight, $line-height) {
-  font-family: "Roboto", "Arial", sans-serif;
-  font-size: $size;
-  font-weight: $weight;
-  line-height: $line-height;
-}
-
 @include font-face("Roboto", "../fonts/roboto/robotolight/robotolight", 300, normal);
 
 @include font-face("Roboto", "../fonts/roboto/robotoregular/robotoregular", 400, normal);
@@ -30,3 +23,12 @@
 @include font-face("Roboto", "../fonts/roboto/robotoblack/robotoblack", 900, normal);
 
 @include font-face("Actor", "../fonts/actor/actor", 400, normal);
+
+// Для вставки в CSS блока
+
+@mixin font($size, $weight, $line-height) {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+}

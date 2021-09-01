@@ -6,6 +6,12 @@
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 34px rgba(0, 0, 0, 0.08);
+
+  @media (max-width: $mobile) {
+    padding: 0;
+    margin-bottom: 40px;
+    box-shadow: none;
+  }
 }
 
 .address__list {
@@ -13,10 +19,15 @@
   margin: 0;
   list-style: none;
 
-  @include font(16px, 300, 22px);
+  @include font(16px, 400, 22px);
+
+  @media (max-width: $mobile) {
+    @include font(14px, 400, 18px);
+  }
 }
 
 .address__item {
+  position: relative;
   border-radius: 10px;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.06);
 }
@@ -24,7 +35,8 @@
 .address__label {
   display: block;
   padding: 20px;
-  margin-top: 30px;
+  padding-left: 40px;
+  margin-top: 20px;
   cursor: pointer;
   border-radius: 10px 10px 0 0;
   transition: 200ms linear;
@@ -36,6 +48,23 @@
   &--margin {
     margin-top: 0;
   }
+
+  @media (max-width: $mobile) {
+    margin-top: 15px;
+  }
+}
+
+.address__arrow {
+  position: absolute;
+  top: 23px;
+  left: 18px;
+  stroke: rgba(#000000, 0.2);
+  transition: 200ms;
+
+  .address__input:checked ~ & {
+    stroke: $accent-color;
+    transform: rotate(90deg);
+  }
 }
 
 .address__input {
@@ -45,15 +74,25 @@
 .address__schedule {
   max-height: 0;
   overflow: hidden;
-  transition: 600ms linear;
+  transition: max-height 600ms linear;
 
   @include font(14px, 300, 27px);
 
   .address__input:checked ~ & {
     max-height: 100px;
+
+    @media (max-width: $mobile) {
+      @include font(12px, 300, 18px);
+    }
   }
 }
 
 .address__text {
-  padding: 20px;
+  padding: 10px;
+  padding-left: 40px;
+  @include font(14px, 300, 18px);
+
+  @media (max-width: $mobile) {
+    @include font(12px, 300, 18px);
+  }
 }

@@ -10,15 +10,19 @@
 
 @import "blocks/button";
 
-@import "blocks/page";
-
 @import "blocks/title";
+
+@import "blocks/logo";
+
+// Page
+
+@import "blocks/page";
 
 // Header
 
 @import "blocks/page-header";
 
-@import "blocks/logo";
+@import "blocks/burger";
 
 @import "blocks/menu";
 
@@ -38,9 +42,11 @@
 
 @import "blocks/socials";
 
-// Main - Banner
+// Main
 
 @import "blocks/main-content";
+
+// Main - Banner
 
 @import "blocks/banner";
 

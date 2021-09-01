@@ -1,19 +1,21 @@
 {
-  "name": "smartech",
+  "name": "gadgetstore",
   "version": "1.0.0",
-  "description": "",
+  "description": "Pet project @ifom1500",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp build",
+    "start": "gulp"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ifom1500/smartech.git"
+    "url": "git+https://github.com/ifom1500/gadgetstore.git"
   },
   "author": "ifom1500",
   "license": "ISC",
   "browserslist": [
-    "last 4 versions"
+    "last 4 versions",
+    "not dead"
   ],
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -24,6 +26,7 @@
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
     "gulp-eslint": "^6.0.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^7.1.0",
@@ -33,6 +36,7 @@
     "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-stylelint": "^13.0.0",
+    "gulp-svg-sprite": "^1.5.0",
     "gulp-svgstore": "^8.0.0",
     "gulp-uglify": "^3.0.2",
     "gulp-webp": "^4.0.1",
@@ -41,6 +45,5 @@
     "stylelint": "^13.13.1",
     "stylelint-config-recess-order": "^2.5.0",
     "stylelint-config-standard": "^22.0.0"
-  },
-  "dependencies": {}
+  }
 }

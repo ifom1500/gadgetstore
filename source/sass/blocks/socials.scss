@@ -2,12 +2,15 @@
   display: flex;
   justify-content: space-between;
   padding: 0;
-  // margin: 0;
   list-style: none;
 }
 
 .socials_item {
   padding: 0 6px;
+}
+
+.socials_icon {
+  stroke: $accent-color;
 }
 
 .socials_link {
@@ -25,24 +28,13 @@
     background: $accent-color;
   }
 
-  &:hover svg,
-  &:focus svg {
-    fill: $accent-color;
-    stroke: #ffffff;
-    stroke-width: 1.2px;
-  }
-
-  &:hover svg path,
-  &:focus svg path {
+  &:hover .socials_icon,
+  &:focus .socials_icon {
     stroke: #ffffff;
     stroke-width: 1.5px;
   }
 
   &:active {
     background: $accent-tint--active;
-  }
-
-  &:active svg {
-    fill: $accent-tint--active;
   }
 }

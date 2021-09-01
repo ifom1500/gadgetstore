@@ -5,10 +5,24 @@
   margin: 0;
   vertical-align: top;
   list-style: none;
+
+  @media (max-width: $tablet) {
+    column-count: 1;
+
+    @include font(14px, 300, 16px);
+  }
+
+  @media (max-width: $mobile) {
+    display: none;
+  }
 }
 
 .footer-nav__item {
   padding-top: 10px;
+
+  @media (max-width: $tablet) {
+    padding-top: 5px;
+  }
 }
 
 .footer-nav__link {

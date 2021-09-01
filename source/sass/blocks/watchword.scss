@@ -3,22 +3,42 @@
 }
 
 .watchword__inner {
-  position: relative;
+  display: block;
+  color: rgba(#000000, 0.7);
   text-align: center;
-}
-
-.watchword__icon {
-  position: absolute;
-  top: -42px;
-  left: 465px;
-  z-index: -1;
+  text-decoration: none;
 }
 
 .watchword__title {
+  position: relative;
+  display: inline-block;
   margin: 0;
   margin-bottom: 15px;
 
   @include font(26px, 700, 32px);
+
+  @media (max-width: $mobile) {
+    margin-bottom: 20px;
+    @include font(20px, 700, 24px);
+  }
+}
+
+.watchword__icon-mind {
+  position: absolute;
+  top: -43px;
+  left: -50px;
+  z-index: -1;
+  fill: #407093;
+  transition: 1s ease;
+
+  .watchword__inner:hover & {
+    fill: $accent-tint--hover;
+  }
+
+  @media (max-width: $mobile) {
+    top: -56px;
+    left: -30px;
+  }
 }
 
 .watchword__subtitle {
@@ -26,41 +46,48 @@
   margin-bottom: 20px;
 
   @include font(20px, 400, 22px);
+
+  @media (max-width: $mobile) {
+    margin-bottom: 5px;
+    @include font(16px, 400, 20px);
+  }
 }
 
 .watchword__link {
   position: relative;
-  padding: 10px 0;
+  display: inline-block;
+  padding: 12px 20px 13px;
+  margin: 0;
   color: rgba(#000000, 0.6);
   text-decoration: none;
-  transition: 200ms;
+  border-radius: 10px;
+  transition: 600ms;
 
   @include font(16px, 300, 24px);
 
-  &::before {
-    position: absolute;
-    right: -22px;
-    bottom: -6px;
-    z-index: -1;
-    width: 34px;
-    height: 34px;
-    content: "";
-    background: url("../img/common/mouse-click.svg") top center no-repeat;
-    opacity: 0.2;
-    transition: 400ms;
-  }
-
   &:hover,
   &:focus {
-    color: $accent-color;
-  }
-
-  &:hover::before,
-  &:focus::before {
-    opacity: 0;
+    box-shadow: 0 0 10px 1px $accent-tint--active;
   }
 
   &:active {
-    color: $accent-tint--active;
+    box-shadow: 0 0 30px 1px $accent-tint--active;
+  }
+
+  @media (max-width: $mobile) {
+    @include font(14px, 300, 18px);
+  }
+}
+
+.watchword__icon-mouse {
+  position: absolute;
+  right: -3px;
+  bottom: -3px;
+  fill: rgba(#000000, 0.2);
+  transition: 600ms;
+
+  .watchword__link:hover &,
+  .watchword__link:focus & {
+    opacity: 0;
   }
 }

@@ -2,6 +2,7 @@ const gulp = require("gulp");
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
 const sass = require("gulp-sass")(require("sass"));
+const csso = require("gulp-csso");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const stylelint = require('gulp-stylelint');
@@ -19,7 +20,7 @@ const browserSync = require("browser-sync").create();
 
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
-const svgstore = require("gulp-svgstore");
+const svgSprite = require("gulp-svg-sprite");
 
 // Styles
 
@@ -28,8 +29,9 @@ const sass2css = () => {
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(postcss([
-      // autoprefixer()
+      autoprefixer()
     ]))
+    .pipe(csso())
     .pipe(rename({
       suffix: '.min'
     }))
@@ -93,7 +95,7 @@ exports.jsLinter = jsLinter
 // Vendors
 
 // const jsVendors = () => {
-//   return gulp.src(["node_modules/svg4everybody/dist/svg4everybody.min.js"])
+//   return gulp.src(["node_modules/..."])
 //     .pipe(concat("libs.js"))
 //     .pipe(gulp.dest("build/js/vendors/"));
 // }
@@ -104,7 +106,7 @@ exports.jsLinter = jsLinter
 
 const images = () => {
   return gulp.src([
-    "source/img/**/*.{jpg,jpeg,png,svg}",
+    "source/img/**/*.{jpg,png,svg}",
     "!source/img/sprite/*.svg"
   ])
     .pipe(imagemin([
@@ -129,14 +131,27 @@ exports.createWebp = createWebp
 
 // Sprite
 
-const svgSprite = () => {
+const svg2Sprite = () => {
   return gulp.src("source/img/sprite/*.svg")
-    .pipe(svgstore())
-    .pipe(rename("sprite.svg"))
+    .pipe(imagemin([
+      imagemin.svgo({
+        plugins: [
+          { removeViewBox: false },
+          { sortAttrs: true }
+        ]
+      })
+    ]))
+    .pipe(svgSprite({
+      mode: {
+        symbol: {
+          sprite: "../sprite.svg"
+        },
+      },
+    }))
     .pipe(gulp.dest("build/img/sprite"))
 }
 
-exports.svgSprite = svgSprite;
+exports.svg2Sprite = svg2Sprite;
 
 // Copy
 
@@ -216,7 +231,7 @@ exports.default = gulp.series(
     scssLinter,
     scripts,
     jsLinter,
-    svgSprite,
+    svg2Sprite,
     copy,
     copyImages
   ),
@@ -235,7 +250,7 @@ const build = gulp.series(
     scssLinter,
     scripts,
     jsLinter,
-    svgSprite,
+    svg2Sprite,
     copy,
     createWebp,
     images

@@ -31,8 +31,14 @@
     height: 65px;
     cursor: auto;
     content: "";
-    background: url("../img/content/smartphone.png") center center no-repeat;
-    background-size: cover;
+    background: url("../img/bg/banner-thumbnail/smartphone-main-thumbnail.png") center center no-repeat;
+    background-size: 17px auto;
+    transition: 300ms;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/bg/banner-thumbnail/smartphone-main-thumbnail@2x.png") center center no-repeat;
+      background-size: 17px auto;
+    }
   }
 
   &--robot::before {
@@ -42,14 +48,19 @@
     width: 65px;
     height: 65px;
     content: "";
-    background: url("../img/content/robot.png") center center no-repeat;
-    background-size: cover;
+    background: url("../img/bg/banner-thumbnail/robot-main-thumbnail.png") center center no-repeat;
+    background-size: 46px auto;
     transition: 300ms;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/bg/banner-thumbnail/robot-main-thumbnail@2x.png") center center no-repeat;
+      background-size: 46px auto;
+    }
   }
 
   &--robot:hover::before,
   &--robot:focus::before {
-    top: -15px;
+    top: -10px;
   }
 
   &--laptop::before {
@@ -59,13 +70,24 @@
     width: 65px;
     height: 65px;
     content: "";
-    background: url("../img/content/laptop.png") center center no-repeat;
-    background-size: cover;
+    background: url("../img/bg/banner-thumbnail/laptop-main-thumbnail.png") center center no-repeat;
+    background-size: 50px auto;
     transition: 300ms;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/bg/banner-thumbnail/laptop-main-thumbnail@2x.png") center center no-repeat;
+      background-size: 50px auto;
+    }
   }
 
   &--laptop:hover::before,
   &--laptop:focus::before {
-    top: -15px;
+    top: -10px;
+  }
+
+  @media (max-width: $mobile) {
+    &:first-child {
+      margin-left: 0;
+    }
   }
 }

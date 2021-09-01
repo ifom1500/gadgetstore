@@ -2,9 +2,51 @@
   padding: 25px 25px;
   background-color: rgba(#000000, 0.04);
   border-radius: 12px;
+  transition: 500ms;
 
   &--big {
     grid-row: span 2;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $accent-tint--hover;
+    // box-shadow: 0 0 10px 1px rgba(34, 60, 80, 0.25);
+  }
+
+  &--exlusive {
+    background: rgba(#000000, 0.04) url("../img/bg/services-icons/exlusive.svg") 140% 130% no-repeat;
+    background-size: 250px auto;
+  }
+
+  &--discount {
+    background: rgba(#000000, 0.04) url("../img/bg/services-icons/discount.svg") 110% 25px no-repeat;
+    background-size: 150px auto;
+  }
+
+  &--support {
+    background: rgba(#000000, 0.04) url("../img/bg/services-icons/support.svg") 106% 35px no-repeat;
+    background-size: 140px auto;
+  }
+
+  &--franchising {
+    background: rgba(#000000, 0.04) url("../img/bg/services-icons/franchising.svg") 120% 30px no-repeat;
+    background-size: 140px auto;
+  }
+
+  &--tradein {
+    background: rgba(#000000, 0.04) url("../img/bg/services-icons/tradein.svg") 107% 30px no-repeat;
+    background-size: 130px auto;
+  }
+
+  &--delivery {
+    background: rgba(#000000, 0.04) url("../img/bg/services-icons/delivery.svg") 125% 20px no-repeat;
+    background-size: 150px auto;
+  }
+
+  &--testdrive {
+    background: rgba(#000000, 0.04) url("../img/bg/services-icons/testdrive.svg") 103% 35px no-repeat;
+    background-size: 135px auto;
   }
 }
 
@@ -12,14 +54,27 @@
   display: block;
   width: 100%;
   height: 100%;
-  color: rgba(#000000, 0.7);
+  color: rgba(#000000, 0.8);
   text-decoration: none;
 }
 
 .service-card__title {
   margin: 0;
+  margin-bottom: 15px;
+  @include font(20px, 700, 30px);
+
+  .service-card--big & {
+    @include font(28px, 700, 34px);
+  }
 }
 
 .service-card__description {
+  width: 70%;
   margin: 0;
+  @include font(18px, 300, 24px);
+
+  .service-card--big & {
+    width: 100%;
+    @include font(22px, 300, 30px);
+  }
 }

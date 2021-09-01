@@ -4,13 +4,20 @@
 
   &::before {
     position: absolute;
-    top: 7px;
-    left: 0;
+    top: 10px;
+    left: 3px;
     width: 24px;
     height: 24px;
     content: "";
-    background: url("../img/common/search.svg") 0 0 no-repeat;
+    background: url("../img/bg/search.svg") 0 0 no-repeat;
     opacity: 0.6;
+
+    @media (max-width: $mobile) {
+      top: 8px;
+      width: 18px;
+      height: 18px;
+      background-size: 18px 18px;
+    }
   }
 }
 
@@ -39,6 +46,17 @@
   &:focus::placeholder {
     color: rgba(0, 0, 0, 1);
   }
+
+  @media (max-width: $tablet) {
+    width: 100%;
+  }
+
+  @media (max-width: $mobile) {
+    // max-width: 400px;
+    padding-left: 37px;
+
+    @include font(14px, 300, 16px);
+  }
 }
 
 .search-form__go {
@@ -48,14 +66,29 @@
   background-color: transparent;
   border: none;
 
-  &::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 30px;
-    height: 40px;
-    content: "";
-    background: url("../img/common/go.svg") 4px 9px no-repeat;
+  @media (max-width: $mobile) {
+    display: block;
+    width: auto;
+    padding: 0;
+    text-align: right;
+    opacity: 0.3;
+    transition: 300ms;
+  }
+}
+
+.search-form__icon {
+  width: 12px;
+  height: 20px;
+  stroke: rgba(#000000, 0.7);
+  transition: 200ms;
+
+  &:hover,
+  &:focus {
+    stroke: $accent-color;
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 }
 
@@ -63,4 +96,5 @@
 
 .search-form__input:focus + .search-form__go {
   display: block;
+  opacity: 1;
 }

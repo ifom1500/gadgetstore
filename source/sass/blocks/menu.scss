@@ -1,8 +1,74 @@
 .menu {
   display: flex;
   flex-grow: 1;
+  justify-content: space-between;
 
   @include font(18px, 500, 24px);
+
+  @media (max-width: $tablet) {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  @media (max-width: $mobile) {
+    display: none;
+  }
+
+  &--opened-on-mobile {
+    @media (max-width: $mobile) {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+
+      @include font(16px, 500, 18px);
+
+      .menu__site-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin: 0;
+      }
+
+      .menu__item {
+        margin: 0;
+        margin-left: 37px;
+      }
+
+      .menu__link {
+        padding: 4px 0;
+        color: rgba(#000000, 0.7);
+      }
+
+      .menu_phone-link {
+        position: relative;
+        display: block;
+        order: -1;
+        margin-top: 4px;
+        margin-bottom: 20px;
+        margin-left: 37px;
+        color: rgba(#000000, 0.7);
+        text-decoration: none;
+
+        @include font(18px, 700, 20px);
+
+        &::before {
+          position: absolute;
+          top: -1px;
+          left: -34px;
+          width: 20px;
+          height: 20px;
+          content: "";
+          background: url("../img/bg/phone.svg") center center no-repeat;
+          opacity: 0.3;
+        }
+      }
+
+      // .menu__user-nav {
+      //   @include outline(2px, red);
+      // }
+    }
+  }
 }
 
 .menu__site-nav {
@@ -16,12 +82,12 @@
 }
 
 .menu__item {
-  padding: 0 15px;
+  margin: 0 15px;
 }
 
 .menu__link {
   display: block;
-  padding: 20px 0;
+  padding: 10px 0;
   color: rgba(#000000, 0.7);
   text-decoration: none;
   transition: 100ms;
@@ -41,7 +107,6 @@
 }
 
 .menu__user-nav {
-  // данное позиционирвоание переопределяется в блоке, так как стоит ниже в каскаде
-  // см. блок user-nav.scss
-  margin-left: auto;
+  display: flex;
+  justify-self: flex-end;
 }

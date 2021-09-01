@@ -11,6 +11,10 @@
     content: "";
     background-image: linear-gradient(90deg, rgba(#000000, 0.01) 0%, rgba(#000000, 0.06) 100%);
   }
+
+  @media (max-width: $tablet) {
+    min-height: 0;
+  }
 }
 
 .banner_wrapper {
@@ -27,19 +31,49 @@
   &--current {
     display: flex;
   }
+
+  @media (max-width: $tablet) {
+    align-items: flex-start;
+  }
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
+
+// Column Left
 
 .banner__column-left {
   max-width: 600px;
   padding: 64px 0 94px 0;
+
+  @media (max-width: $tablet) {
+    max-width: 45%;
+    padding: 10px 0 20px 0;
+  }
+
+  @media (max-width: $mobile) {
+    order: 2;
+    max-width: 100%;
+    text-align: center;
+  }
 }
 
 .banner__title {
   margin: 0;
   margin-bottom: 20px;
   color: rgba(#000000, 0.8);
-
   @include font(72px, 900, 72px);
+
+  @media (max-width: $tablet) {
+    @include font(48px, 900, 58px);
+  }
+
+  @media (max-width: $mobile) {
+    @include font(40px, 900, 48px);
+  }
 }
 
 .banner__subtitle {
@@ -47,6 +81,14 @@
   margin-bottom: 20px;
 
   @include font(48px, 300, 70px);
+
+  @media (max-width: $tablet) {
+    @include font(28px, 300, 34px);
+  }
+
+  @media (max-width: $mobile) {
+    @include font(22px, 300, 26px);
+  }
 }
 
 .banner__text {
@@ -54,6 +96,15 @@
   color: rgba(#000000, 0.8);
 
   @include font(16px, 400, 24px);
+
+  @media (max-width: $tablet) {
+    @include font(14px, 400, 20px);
+  }
+
+  @media (max-width: $mobile) {
+    max-width: 450px;
+    padding: 0 20px;
+  }
 }
 
 .banner__price {
@@ -61,11 +112,28 @@
   color: rgba(#000000, 0.7);
 
   @include font(24px, 700, 32px);
+
+  @media (max-width: $tablet) {
+    @include font(24px, 900, 28px);
+  }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 30px;
+  }
 }
 
 .banner__button {
+  position: relative;
+  padding: 18px 34px 14px 60px;
+
   &::before {
-    background-image: url("../img/common/cart--white.svg");
+    position: absolute;
+    top: 14px;
+    left: 25px;
+    width: 20px;
+    height: 20px;
+    content: "";
+    background-image: url("../img/bg/cart-white.svg");
   }
 
   &:hover::before,
@@ -92,57 +160,120 @@
   }
 }
 
+// Column Right =========================================
+
 .banner__column-right {
-  padding-right: 80px;
+  // padding-right: 150px;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+
+  @media (max-width: $tablet) {
+    align-self: center;
+    width: 45%;
+    padding-right: 0;
+    margin-top: -40px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 20px;
+  }
 }
 
 .banner__preview-inner {
   position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  @media (max-width: $tablet) {
+    justify-content: center;
+  }
 }
 
 .banner__circle {
-  width: 500px;
-  height: 500px;
-  background-image:
-    linear-gradient(
-      135deg,
-      $gradient-color--circle-1 0%,
-      $gradient-color--circle-2 100%
-    );
+  position: absolute;
+  top: 30px;
+  z-index: -1;
+  width: 480px;
+  height: 480px;
+  background-image: linear-gradient(135deg, $gradient-color--circle-1 0%, $gradient-color--circle-2 100%);
   border-radius: 50%;
   transition: 500ms;
 
   .banner__preview-inner:hover & {
     transform: scale(0.98, 0.98);
-    // transform: rotateY(20deg) skewY(-3deg);
+  }
+
+  @media (max-width: $tablet) {
+    right: auto;
+    left: auto;
+    width: 350px;
+    height: 350px;
+  }
+
+  @media (max-width: $mobile) {
+    width: 250px;
+    height: 250px;
   }
 }
 
 .banner__img {
+  position: relative;
   transition: 800ms;
 
   .banner__item--smartphone & {
-    position: absolute;
-    top: -50px;
-    left: -37px;
-    width: 600px;
-    height: 600px;
+    width: 173px;
+    height: auto;
+
+    @media (max-width: $tablet) {
+      width: 130px;
+      margin-bottom: 70px;
+    }
+
+    @media (max-width: $mobile) {
+      width: 90px;
+      margin-top: 15px;
+      margin-bottom: 0;
+    }
   }
 
   .banner__item--robot & {
-    position: absolute;
-    top: -10px;
-    left: -50px;
-    width: 550px;
-    height: 550px;
+    top: 70px;
+    right: 20px;
+    width: 460px;
+    height: auto;
+
+    @media (max-width: $tablet) {
+      width: 330px;
+      margin-bottom: 210px;
+    }
+
+    @media (max-width: $mobile) {
+      top: 55px;
+      width: 230px;
+      margin-top: 0;
+      margin-bottom: 90px;
+    }
   }
 
   .banner__item--laptop & {
-    position: absolute;
-    top: -50px;
-    left: -60px;
-    width: 600px;
-    height: 600px;
+    top: 70px;
+    right: 20px;
+    width: 500px;
+    height: auto;
+
+    @media (max-width: $tablet) {
+      top: 60px;
+      width: 370px;
+      margin-bottom: 210px;
+    }
+
+    @media (max-width: $mobile) {
+      right: 10px;
+      width: 240px;
+      margin-bottom: 90px;
+    }
   }
 
   .banner__preview-inner:hover & {
@@ -150,7 +281,14 @@
   }
 }
 
+// Toggles
+
 .banner__toggles {
   align-self: flex-end;
+  margin-top: 30px;
   margin-bottom: 14px;
+
+  @media (max-width: $mobile) {
+    align-self: center;
+  }
 }
