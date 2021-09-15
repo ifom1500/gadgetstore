@@ -1,0 +1,80 @@
+.blank-page {
+  padding: 0;
+  margin-top: 60px;
+  margin-bottom: 110px;
+  color: rgba(#000000, 0.9);
+  @include font(25px, 300, 120%);
+
+  @media (max-width: $mobile) {
+    padding: 10px;
+  }
+}
+
+.blank-page__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    align-items: flex-end;
+    @include font(15px, 300, 120%);
+
+    // br {
+    //   display: none;
+    // }
+  }
+}
+
+.blank-page__title {
+  margin: 0;
+  text-align: right;
+  letter-spacing: 2px;
+  @include font(50px, 300, 120%);
+
+  @media (max-width: $mobile) {
+    text-align: left;
+    @include font(30px, 300, 120%);
+  }
+}
+
+.blank-page__link {
+  position: relative;
+  padding-left: 4%;
+  color: inherit;
+  text-align: left;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 300ms ease;
+
+
+  &::before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+    content: "";
+    background: url(../img/bg/arrow-next.svg) no-repeat center center;
+  }
+
+  &:hover {
+    opacity: 0.95;
+  }
+
+  &:hover::before {
+    animation: shake-arrow 600ms ease 100ms;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 0;
+    margin-top: 20px;
+
+    &::before {
+      right: -5px;
+      width: 30px;
+      height: 17px;
+      background-size: 60% auto;
+    }
+  }
+}

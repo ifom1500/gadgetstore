@@ -1,0 +1,49 @@
+.popup-callback {
+  width: 500px;
+  min-height: 400px;
+}
+
+.popup-callback__title {
+  margin: 0;
+  color: rgba(#000000, 0.8);
+  text-align: center;
+  @include font(38px, 900, 44px);
+
+  @media (max-width: $mobile) {
+    margin-top: 25px;
+    @include font(30px, 900, 36px);
+  }
+}
+
+.popup-callback__text {
+  margin: 13px 0 25px;
+  text-align: center;
+}
+
+.popup-callback__form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.popup-callback__approval {
+
+
+  @media (max-width: $mobile) {
+    @include font(14px, 300, 14px);
+  }
+}
+
+.popup-callback__push-button {
+  width: 100%;
+  padding: 0;
+  padding: 10px 30px;
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  letter-spacing: 1px;
+  @include font(16px, 500, 20px);
+
+  @media (max-width: $mobile) {
+    margin-top: 25px;
+  }
+}

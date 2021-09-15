@@ -1,0 +1,94 @@
+.popup-login {
+  width: 450px;
+  min-height: 350px;
+
+  @media (max-width: $mobile) {
+    top: 0;
+    width: 100%;
+  }
+}
+
+.popup-login__title {
+  margin: 0;
+  color: rgba(#000000, 0.8);
+  text-align: center;
+  @include font(38px, 900, 44px);
+
+  @media (max-width: $mobile) {
+    margin-top: 25px;
+    @include font(30px, 900, 36px);
+  }
+}
+
+.popup-login__text {
+  margin: 13px 0 25px;
+  text-align: center;
+}
+
+.popup-login__form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.popup-login__input-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.popup-login__showpass {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  width: 30px;
+  height: 25px;
+  background: url(../img/bg/open-eye.svg) no-repeat center center;
+  border: none;
+  opacity: 0.3;
+  transition: 200ms;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &--pushed {
+    background: url(../img/bg/close-eye.svg) no-repeat center center;
+  }
+}
+
+.popup-login__rememberme {
+  width: 55%;
+
+  @media (max-width: $mobile) {
+    @include font(14px, 300, 14px);
+  }
+}
+
+.popup-login__lose-password {
+  margin-left: auto;
+  color: rgba(#000000, 0.9);
+  text-decoration: none;
+  transition: 200ms;
+
+  &:hover {
+    color: rgba(#000000, 0.6);
+  }
+
+  @media (max-width: $mobile) {
+    @include font(14px, 300, 14px);
+  }
+}
+
+.popup-login__signin-button {
+  width: 100%;
+  padding: 0;
+  padding: 10px 30px;
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  letter-spacing: 1px;
+  @include font(16px, 500, 20px);
+
+  @media (max-width: $mobile) {
+    margin-top: 25px;
+  }
+}

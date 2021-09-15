@@ -33,3 +33,18 @@
 .page__footer {
   flex-shrink: 0;
 }
+
+.page__popup {
+  position: fixed;
+  left: 50%;
+  z-index: 9;
+  transform: translateX(-50%);
+
+  &--login {
+    top: 150px;
+  }
+
+  &--callback {
+    bottom: 350px;
+  }
+}

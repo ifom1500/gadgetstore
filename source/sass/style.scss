@@ -6,13 +6,17 @@
 
 @import "global/global";
 
-@import "blocks/container";
+@import "global/visually-hidden";
 
-@import "blocks/button";
+@import "global/container";
 
-@import "blocks/title";
+@import "global/button";
 
-@import "blocks/logo";
+@import "global/title";
+
+@import "global/logo";
+
+@import "global/checkbox";
 
 // Page
 
@@ -77,3 +81,19 @@
 @import "blocks/map";
 
 @import "blocks/address";
+
+// Popup
+
+@import "blocks/popup";
+
+@import "blocks/popup-login";
+
+@import "blocks/popup-callback";
+
+// Login Page
+
+@import "blocks/login-page";
+
+// Blank Page
+
+@import "blocks/blank-page";

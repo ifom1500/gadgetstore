@@ -69,7 +69,8 @@ exports.html = html;
 // Scripts
 
 const scripts = () => {
-  return gulp.src("source/js/*.js")
+  return gulp.src("source/js/**/*.js")
+    .pipe(plumber())
     .pipe(babel({
       presets: ['@babel/env']
     }))
@@ -77,6 +78,7 @@ const scripts = () => {
     .pipe(rename({
       suffix: '.min'
     }))
+    .pipe(plumber.stop())
     .pipe(gulp.dest("build/js"))
     .pipe(browserSync.stream());
 }
@@ -84,7 +86,7 @@ const scripts = () => {
 exports.scripts = scripts
 
 const jsLinter = () => {
-  return gulp.src("source/js/main.js")
+  return gulp.src("source/js/**/*.js")
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
@@ -219,6 +221,7 @@ exports.reload = reload
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("sass2css"));
   gulp.watch("source/*.html", gulp.series(html, reload));
+  gulp.watch("source/js/**/*.js", gulp.series("scripts"));
 }
 
 // Default
