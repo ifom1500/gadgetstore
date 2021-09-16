@@ -37,14 +37,31 @@
 .page__popup {
   position: fixed;
   left: 50%;
-  z-index: 9;
+  z-index: 10;
   transform: translateX(-50%);
 
   &--login {
     top: 150px;
+
+    @media (max-width: $tablet) {
+      top: 50px;
+    }
+
+    @media (max-width: $mobile) {
+      top: 0;
+    }
   }
 
   &--callback {
     bottom: 150px;
+
+    @media (max-width: $tablet) {
+      bottom: 50px;
+    }
+
+    @media (max-width: $mobile) {
+      top: 0;
+      bottom: auto;
+    }
   }
 }

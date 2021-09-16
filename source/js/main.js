@@ -80,7 +80,10 @@ const userNav = document.querySelector('.user-nav');
 const catalogNav = document.querySelector('.catalog-nav');
 
 burgerBtn.classList.remove('burger--nojs');
+menu.classList.remove('menu--nojs');
+userNav.classList.remove('user-nav--nojs');
 catalogNav.classList.remove('catalog-nav--nojs');
+
 
 burgerBtn.addEventListener('click', function (evt) {
   if (burgerBtn.classList.contains('burger--open')) {
@@ -147,3 +150,18 @@ controlToggleLaptop.addEventListener('click', function (evt) {
 })
 
 // Map
+
+const adressInputMoscow = document.querySelector('.address__input--moscow');
+const mapItemMoscow = document.querySelector('.map__item--moscow');
+const adressInputElektrostal = document.querySelector('.address__input--elektrostal');
+const mapItemElektrostal = document.querySelector('.map__item--elektrostal');
+
+adressInputMoscow.onchange = function () {
+  mapItemMoscow.classList.add('map__item--show');
+  mapItemElektrostal.classList.remove('map__item--show');
+}
+
+adressInputElektrostal.onchange = function () {
+  mapItemElektrostal.classList.add('map__item--show');
+  mapItemMoscow.classList.remove('map__item--show');
+}

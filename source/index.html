@@ -93,7 +93,7 @@
         </button>
       </div>
 
-      <div class="menu">
+      <div class="menu menu--nojs">
         <ul class="menu__site-nav">
           <li class="menu__item">
             <a class="menu__link" href="blank.html">Каталог</a>
@@ -113,7 +113,7 @@
             <div class="phone-link__text">8 800 000 00 00</div>
           </div>
         </a>
-        <ul class="menu__user-nav user-nav">
+        <ul class="menu__user-nav user-nav user-nav--nojs">
           <li class="user-nav__item user-nav__item--cart">
             <a href="blank.html">
               <span class="visually-hidden">Корзина</span>
@@ -188,7 +188,7 @@
             <div class="banner__column-left">
               <h3 class="banner__title">Zetion Xi Plus</h3>
               <p class="banner__subtitle">Предзаказ до 15 сентября</p>
-              <p class="banner__text">Высокопроизводительный 8-ядерный процессор, графический ускоритель с частотой 1000 МГц, акумулятор емкостью 5020 мАч, 5 модулей камеры разрешением 148 пикселей. Это идеальный гаджет на каждый день! </p>
+              <p class="banner__text">Высокопроизводительный 8-ядерный процессор, графический ускоритель с частотой 1000 МГц, акумулятор емкостью 5020 мАч, 5 модулей камеры разрешением 148 пикселей. Это идеальный гаджет на каждый день: смотрите фильмы в высокой четкости, играйте в AAA-игры!</p>
               <p class="banner__price">от 180&#8201;000 ₽</p>
               <a class="banner__button button" href="blank.html">Купить</a>
             </div>
@@ -229,7 +229,7 @@
               <p class="banner__text">Линейка игровых ноутбуков класса премиум на основе аппаратной платформы, включающей 6- либо 8-ядерные процессоры и мощные дискретные видеокарты. Все модели оборудованы высококачественными IPS дисплеями</p>
               <p class="banner__price">от 99&#8201;000 ₽</p>
               <a class="banner__button button" href="blank.html">Купить</a>
-            </div>s
+            </div>
             <div class="banner__column-right">
               <div class="banner__preview-inner">
                 <div class="banner__circle"></div>
@@ -278,7 +278,7 @@
         <div class="popular-products__inner">
           <ul class="popular-products__list">
             <li class="popular-products__item product-card">
-              <a href="" class="product-card__link">
+              <a href="blank.html" class="product-card__link">
                 <h3 class="product-card__title"><span class="product-card__title--regular">Клавиатура</span> Gitarix Keyboard Mech</h3>
                 <p class="product-card__price">4&#8201;500 ₽</p>
                 <div class="product-card__picture">
@@ -292,7 +292,7 @@
             </li>
 
             <li class="popular-products__item product-card">
-              <a href="" class="product-card__link">
+              <a href="blank.html" class="product-card__link">
                 <h3 class="product-card__title"><span class="product-card__title--regular">Колонка переносная</span> Coub Outdoor 300</h3>
                 <p class="product-card__price">1&#8201;500 ₽</p>
                 <div class="product-card__picture">
@@ -306,7 +306,7 @@
             </li>
 
             <li class="popular-products__item product-card">
-              <a href="" class="product-card__link">
+              <a href="blank.html" class="product-card__link">
                 <h3 class="product-card__title"><span class="product-card__title--regular">Умные часы</span> Autonix Plaze 5</h3>
                 <p class="product-card__price">12&#8201;000 ₽</p>
                 <div class="product-card__picture">
@@ -320,7 +320,7 @@
             </li>
 
             <li class="popular-products__item product-card">
-              <a href="" class="product-card__link">
+              <a href="blank.html" class="product-card__link">
                 <h3 class="product-card__title"><span class="product-card__title--regular">Куб-переключатель</span> Quadro Smart3D</h3>
                 <p class="product-card__price">6&#8201;000 ₽</p>
                 <div class="product-card__picture">
@@ -436,17 +436,17 @@
         <h2 class="map__title title">Где нас найти:</h2>
         <div class="map__inner">
           <div class="map__frames">
-            <div class="map__item map-item--moscow">
+            <div class="map__item map__item--moscow map__item--show">
               <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af1350d5590a282a3e7f7f4b5cb0599e56112d7bed2ea299abdabf563e1fc5264&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
             </div>
-            <div class="map__item map-item--elekrtostal">
+            <div class="map__item map__item--elektrostal ">
               <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Abda4b80872f96d8c6a4b49e091254082232d63f26018c6a51224e5d71b9b30f8&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
             </div>
           </div>
           <div class="map__address address">
             <ul class="address__list">
               <li class="address__item">
-                <input class="address__input" id="ac-msc" name="moscow" type="radio">
+                <input class="address__input address__input--moscow" id="ac-msc" name="moscow" type="radio">
                 <label class="address__label address__label--margin" for="ac-msc">Москва,<br>Комсомольская площадь, 6</label>
                 <svg class="address__arrow" width="10" height="16">
                   <use xlink:href="#switch-next"></use>
@@ -457,7 +457,7 @@
               </li>
 
               <li class="address__item">
-                <input class="address__input" id="ac-els" name="moscow" type="radio">
+                <input class="address__input address__input--elektrostal" id="ac-els" name="moscow" type="radio">
                 <label class="address__label" for="ac-els">Электросталь,<br>переулок Строительный, 12к9</label>
                 <svg class="address__arrow" width="10" height="16">
                   <use xlink:href="#switch-next"></use>
@@ -624,7 +624,7 @@
       <h2 class="popup-callback__title">Заказать звонок</h2>
       <p class="popup-callback__text">Введите Ваше имя и номер телефона.<br>Мы Вам обязательно перезвоним!</p>
       <form class="popup-callback__form" action="#" method="post">
-        <input class="popup__input popup__input--customer" name="customer" type="text" placeholder="Игорь Крутой" required>
+        <input class="popup__input popup__input--customer" name="customer" type="text" placeholder="Ваше имя" required>
         <input class="popup__input" name="phone" type="text" placeholder="+7 (000) 000-00-00" required>
 
         <input class="checkbox__input" id="approval" type="checkbox" name="approval" checked>
@@ -635,9 +635,6 @@
     </div>
   </section>
 
-  <script>
-    console.log('В теле ХТМЛcss');
-  </script>
   <script src="js/main.min.js"></script>
 </body>
 

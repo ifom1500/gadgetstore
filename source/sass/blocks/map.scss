@@ -8,8 +8,12 @@
   position: relative;
 }
 
-.map-item--elekrtostal {
+.map__item {
   display: none;
+
+  &--show {
+    display: block;
+  }
 }
 
 .map__address {

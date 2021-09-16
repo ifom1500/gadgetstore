@@ -4,10 +4,10 @@
 
   &::before {
     position: absolute;
-    top: -200px;
+    top: -500px;
     left: 0;
     width: 100%;
-    height: calc(100% + 200px);
+    height: calc(100% + 500px);
     content: "";
     background-image: linear-gradient(90deg, rgba(#000000, 0.01) 0%, rgba(#000000, 0.06) 100%);
   }
@@ -21,19 +21,28 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  min-height: 700px;
+
+  @media (max-width: $tablet) {
+    min-height: 500px;
+  }
 }
 
 .banner__item {
   display: none;
+  flex-grow: 1;
   align-items: stretch;
   justify-content: space-between;
 
   &--current {
     display: flex;
+    // animation-name: switch-slide;
+    animation-duration: 500ms;
+    animation-timing-function: ease;
   }
 
   @media (max-width: $tablet) {
-    align-items: flex-start;
+    // align-items: flex-start;
   }
 
   @media (max-width: $mobile) {
@@ -43,7 +52,21 @@
   }
 }
 
-// Column Left
+@keyframes switch-slide {
+  0% {
+    transform: translateX(500px);
+  }
+
+  70% {
+    transform: translateX(-50px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+// Column Left ===================================
 
 .banner__column-left {
   max-width: 600px;
@@ -160,23 +183,19 @@
   }
 }
 
-// Column Right =========================================
+// Column Right ===========================================
 
 .banner__column-right {
-  // padding-right: 150px;
   display: flex;
   justify-content: center;
   width: 50%;
 
   @media (max-width: $tablet) {
-    align-self: center;
     width: 45%;
-    padding-right: 0;
-    margin-top: -40px;
   }
 
   @media (max-width: $mobile) {
-    margin-bottom: 20px;
+    height: 270px;
   }
 }
 
@@ -185,10 +204,6 @@
   display: flex;
   justify-content: center;
   width: 100%;
-
-  @media (max-width: $tablet) {
-    justify-content: center;
-  }
 }
 
 .banner__circle {
@@ -206,8 +221,7 @@
   }
 
   @media (max-width: $tablet) {
-    right: auto;
-    left: auto;
+    top: 0;
     width: 350px;
     height: 350px;
   }
@@ -227,14 +241,13 @@
     height: auto;
 
     @media (max-width: $tablet) {
+      top: -25px;
       width: 130px;
-      margin-bottom: 70px;
     }
 
     @media (max-width: $mobile) {
+      top: -8px;
       width: 90px;
-      margin-top: 15px;
-      margin-bottom: 0;
     }
   }
 
@@ -245,15 +258,15 @@
     height: auto;
 
     @media (max-width: $tablet) {
+      top: 30px;
       width: 330px;
-      margin-bottom: 210px;
+      margin-bottom: 0;
     }
 
     @media (max-width: $mobile) {
-      top: 55px;
+      top: 28px;
+      left: 1px;
       width: 230px;
-      margin-top: 0;
-      margin-bottom: 90px;
     }
   }
 
@@ -264,15 +277,14 @@
     height: auto;
 
     @media (max-width: $tablet) {
-      top: 60px;
+      top: 30px;
       width: 370px;
-      margin-bottom: 210px;
+      margin-bottom: 0;
     }
 
     @media (max-width: $mobile) {
-      right: 10px;
+      top: 29px;
       width: 240px;
-      margin-bottom: 90px;
     }
   }
 

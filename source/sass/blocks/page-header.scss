@@ -1,6 +1,6 @@
 // .page-header {}
 
-// Top
+// Top =============================
 
 .page-header__top {
   display: flex;
@@ -9,13 +9,16 @@
   min-height: 35px;
   padding-top: 39px;
 
+  // @include outline(12px, yellow);
+
   @media (max-width: $tablet) {
     display: flex;
     flex-direction: column;
+    padding-top: 20px;
   }
 
-  @media (max-width: $tablet) {
-    padding-top: 20px;
+  @media (max-width: $mobile) {
+    // background-color: rgba(#000000, 0.05);
   }
 }
 
@@ -39,7 +42,7 @@
   display: none;
 }
 
-// Bottom
+// Bottom ========================
 
 .page-header__bottom {
   display: flex;
@@ -47,6 +50,7 @@
   justify-content: space-between;
   padding-top: 10px;
   padding-bottom: 10px;
+  // @include outline(12px, orange);
 
   @media (max-width: $tablet) {
     flex-direction: column;
@@ -55,6 +59,7 @@
   @media (max-width: $mobile) {
     padding-top: 0;
     padding-bottom: 0;
+    // background-color: rgba(#000000, 0.05);
   }
 }
 

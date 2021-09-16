@@ -29,7 +29,7 @@
   @include font(16px, 300, 20px);
 
   @media (max-width: $mobile) {
-    padding: 30px 30px 20px;
+    padding: 30px 30px 40px;
   }
 }
 
@@ -53,6 +53,7 @@
   position: absolute;
   top: 20px;
   right: 20px;
+  z-index: 99;
   width: 25px;
   height: 25px;
   background: url(../img/bg/close.svg) no-repeat center center;

@@ -63,10 +63,28 @@
           opacity: 0.3;
         }
       }
+    }
+  }
 
-      // .menu__user-nav {
-      //   @include outline(2px, red);
-      // }
+  &--nojs {
+    @media (max-width: $mobile) {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+
+      @include font(16px, 500, 18px);
+
+      .menu__site-nav {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 20px;
+      }
+
+      .menu__item {
+        margin: 0;
+      }
     }
   }
 }

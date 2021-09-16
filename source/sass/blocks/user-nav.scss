@@ -19,6 +19,13 @@
       }
     }
   }
+
+  &--nojs {
+    @media (max-width: $mobile) {
+      margin: 0 auto;
+    }
+  }
+
 }
 
 .user-nav__item {

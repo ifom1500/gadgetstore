@@ -1,6 +1,6 @@
 .blank-page {
   padding: 0;
-  margin-top: 60px;
+  margin-top: 100px;
   margin-bottom: 110px;
   color: rgba(#000000, 0.9);
   @include font(25px, 300, 120%);
@@ -15,14 +15,11 @@
   align-items: center;
   justify-content: center;
 
+
   @media (max-width: $mobile) {
     flex-direction: column;
     align-items: flex-end;
     @include font(15px, 300, 120%);
-
-    // br {
-    //   display: none;
-    // }
   }
 }
 

@@ -1,9 +1,8 @@
 .popup-callback {
-  width: 500px;
-  min-height: 400px;
+  width: 450px;
+  min-height: 350px;
 
   @media (max-width: $mobile) {
-    bottom: 0;
     width: 100%;
   }
 }
@@ -31,8 +30,6 @@
 }
 
 .popup-callback__approval {
-
-
   @media (max-width: $mobile) {
     @include font(14px, 300, 14px);
   }
