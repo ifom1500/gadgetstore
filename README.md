@@ -3,6 +3,7 @@
 *Шоурум умных гаджетов*
 
 ##### Pet-project by @ifom1500
+
 [Посмотреть на Github](https://github.com/ifom1500/gadgetstore)
+
 [Посмотреть на Vercel](https://gadgetstore.vercel.app)
----
