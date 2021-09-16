@@ -13,7 +13,7 @@
   }
 
   &--opened {
-    @media (max-width: $tablet) {
+    @media (min-width: $mobile + 1px) and (max-width: $tablet) {
       position: absolute;
       top: 75px;
       right: 64px;

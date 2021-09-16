@@ -88,7 +88,7 @@
           </svg>
           <img class="logo__text" src="../img/content/logo-gadgetstore.svg" width="182" height="20" alt="Логотип компании GadgetStore">
         </a>
-        <button class="page-header__burger burger burger--open" type="button">
+        <button class="page-header__burger burger burger--open burger--nojs" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
       </div>
@@ -113,11 +113,11 @@
             <div class="phone-link__text">8 800 000 00 00</div>
           </div>
         </a>
-        <ul class="menu__user-nav user-nav ">
+        <ul class="menu__user-nav user-nav">
           <li class="user-nav__item user-nav__item--cart">
             <a href="blank.html">
               <span class="visually-hidden">Корзина</span>
-              <svg class="user-nav__icon" w>
+              <svg class="user-nav__icon">
                 <use xlink:href="#cart"></use>
               </svg>
             </a>
@@ -152,7 +152,7 @@
           </svg>
         </button>
       </form>
-      <ul class="catalog-nav">
+      <ul class="catalog-nav catalog-nav--nojs">
         <li class="catalog-nav__item">
           <a class="catalog-nav__link" href="blank.html">Смартфоны</a>
         </li>
@@ -184,7 +184,7 @@
       <div class="container">
         <h2 class="visually-hidden">Наши главные предложения и события</h2>
         <div class="banner_wrapper slider-list">
-          <div class="banner__item banner__item--smartphone banner__item--current slider-item ">
+          <div class="banner__item banner__item--smartphone slider-item banner__item--current">
             <div class="banner__column-left">
               <h3 class="banner__title">Zetion Xi Plus</h3>
               <p class="banner__subtitle">Предзаказ до 15 сентября</p>
@@ -197,13 +197,13 @@
                 <div class="banner__circle"></div>
                 <picture>
                   <source type="image/webp" srcset="img/content/banner-desktop/smartphone-main-desktop.webp 1x, img/content/banner-desktop/smartphone-main-desktop@2x.webp 2x">
-                  <img class="banner__img" src="img/content/banner-desktop/smartphone-main-desktop.png" srcset="smartphone-main-desktop@2x.png 2x" alt="Внешний вид смартфона Zetion Xi Plus">
+                  <img class="banner__img" src="img/content/banner-desktop/smartphone-main-desktop.png" srcset="img/content/banner-desktop/smartphone-main-desktop@2x.png 2x" alt="Внешний вид смартфона Zetion Xi Plus">
                 </picture>
               </div>
             </div>
           </div>
 
-          <div class="banner__item banner__item--robot  slider-item ">
+          <div class="banner__item banner__item--robot slider-item ">
             <div class="banner__column-left">
               <h3 class="banner__title">Omnidroid Hero X</h3>
               <p class="banner__subtitle">Бестселлер сезона XXI</p>
@@ -215,36 +215,36 @@
               <div class="banner__preview-inner">
                 <div class="banner__circle"></div>
                 <picture>
-                  <source type="image/webp" srcset="img/content/banner-desktop/robot-main-desktop.webp 1x, robot-main-desktop@2x.webp 2x">
-                  <img class="banner__img" src="img/content/banner-desktop/robot-main-desktop.jpg" srcset="robot-main-desktop@2x.jpg 2x" alt="Внешний вид робота mnidroid Hero X в полете">
+                  <source type="image/webp" srcset="img/content/banner-desktop/robot-main-desktop.webp 1x, img/content/banner-desktop/robot-main-desktop@2x.webp 2x">
+                  <img class="banner__img" src="img/content/banner-desktop/robot-main-desktop.jpg" srcset="img/content/banner-desktop/robot-main-desktop@2x.jpg 2x" alt="Внешний вид робота mnidroid Hero X в полете">
                 </picture>
               </div>
             </div>
           </div>
 
-          <div class="banner__item banner__item--laptop  slider-item">
+          <div class="banner__item banner__item--laptop slider-item">
             <div class="banner__column-left">
               <h3 class="banner__title">MPA Flatbook 15</h3>
               <p class="banner__subtitle">Смарт-часы в подарок!</p>
               <p class="banner__text">Линейка игровых ноутбуков класса премиум на основе аппаратной платформы, включающей 6- либо 8-ядерные процессоры и мощные дискретные видеокарты. Все модели оборудованы высококачественными IPS дисплеями</p>
               <p class="banner__price">от 99&#8201;000 ₽</p>
               <a class="banner__button button" href="blank.html">Купить</a>
-            </div>
+            </div>s
             <div class="banner__column-right">
               <div class="banner__preview-inner">
                 <div class="banner__circle"></div>
                 <picture>
-                  <source type="image/webp" srcset="img/content/banner-desktop/laptop-main-desktop.webp 1x, laptop-main-desktop@2x.webp 2x">
-                  <img class="banner__img" src="img/content/banner-desktop/laptop-main-desktop.jpg" srcset="laptop-main-desktop@2x.jpg 2x" alt="Внешний вид ноутбука MPA Flatbook 15 в раскрытом состоянии">
+                  <source type="image/webp" srcset="img/content/banner-desktop/laptop-main-desktop.webp 1x, img/content/banner-desktop/laptop-main-desktop@2x.webp 2x">
+                  <img class="banner__img" src="img/content/banner-desktop/laptop-main-desktop.jpg" srcset="img/content/banner-desktop/laptop-main-desktop@2x.jpg 2x" alt="Внешний вид ноутбука MPA Flatbook 15 в раскрытом состоянии">
                 </picture>
               </div>
             </div>
           </div>
 
           <div class="banner__toggles slider__toggles control">
-            <button class="control__toggle control__toggle--smartphone control__toggle--current" type="button" disabled></button>
-            <button class="control__toggle control__toggle--robot" type="button"></button>
-            <button class="control__toggle control__toggle--laptop" type="button"></button>
+            <button class="control__toggle control__toggle--smartphone control__toggle--current" type="button"></button>
+            <button class="control__toggle control__toggle--robot " type="button"></button>
+            <button class="control__toggle control__toggle--laptop " type="button"></button>
           </div>
         </div>
       </div>

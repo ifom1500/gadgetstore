@@ -1,6 +1,11 @@
 .popup-callback {
   width: 500px;
   min-height: 400px;
+
+  @media (max-width: $mobile) {
+    bottom: 0;
+    width: 100%;
+  }
 }
 
 .popup-callback__title {
